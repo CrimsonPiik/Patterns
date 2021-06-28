@@ -1,4 +1,4 @@
-# provider_demo
+# patterns
 
 A new Flutter project.
 
