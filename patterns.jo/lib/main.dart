@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:patterns/homeView.dart';
 import 'package:provider/provider.dart';
 import 'package:patterns/patterns.dart';
 
@@ -14,11 +15,13 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<Patterns>(create: (context) => Patterns())
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Patterns.jo',
         theme: ThemeData(
           primarySwatch: Colors.yellow,
         ),
-        home: MyHomePage(title: 'Patterns.jo'),
+        home: HomeView(),
+        //MyHomePage(title: 'Patterns.jo'),
       ),
     );
   }
