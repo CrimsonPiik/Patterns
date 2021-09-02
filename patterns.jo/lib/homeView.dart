@@ -60,52 +60,50 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
                         Container(child: Row(children: <Widget>[])),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            top: 10.0,
-                            bottom: 10.0,
-                            left: 20.0,
-                            right: 20.0,
-                          ),
-                          child: Text(
-                            "Patterns an online store based in Amman-Jordan ... With Patterns ... ...",
-                            textAlign: TextAlign.center,
-                            style:
-                                Theme.of(context).textTheme.bodyText1!.copyWith(
-                                      fontSize: 20.0,
-                                      height: 1.8,
-                                      fontWeight: FontWeight.w300,
-                                    ),
-                          ),
-                        ),
+                        // Padding(
+                        //   padding: const EdgeInsets.only(
+                        //     top: 10.0,
+                        //     bottom: 10.0,
+                        //     left: 20.0,
+                        //     right: 20.0,
+                        //   ),
+                        //   child: Text(
+                        //     "Patterns an online store based in Amman-Jordan ... With Patterns ... ...",
+                        //     textAlign: TextAlign.center,
+                        //     style:
+                        //         Theme.of(context).textTheme.bodyText1!.copyWith(
+                        //               fontSize: 20.0,
+                        //               height: 1.8,
+                        //               fontWeight: FontWeight.w300,
+                        //             ),
+                        //   ),
+                        // ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             TextButton(
                               onPressed: () {
-                                //getMap();
-                                // addFieldsToDb();
-                                // getKeysValuesFromMap(themap);
-                                // js.context.callMethod("open", [
-                                //   "https://play.google.com/store/apps/details?id=com.stevapps.venda"
-                                // ]);
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                  content: Text("Coming Soon"),
+                                  duration: Duration(milliseconds: 800),
+                                ));
                               },
                               child: Image.asset(
-                                "playstore.png",
-                                height: 100.0,
-                                width: 170.0,
+                                "google-play-soon.png",
+                                height: 80.0,
+                                width: 150.0,
                               ),
                             ),
+                            SizedBox(width: 10),
                             TextButton(
                               onPressed: () {
-                                //  getMap();
-                                // getKeysValuesFromMap(themap);
-                                // addFieldsToDb();
-
-                                _scaffoldKey.currentState!.showSnackBar(
-                                    new SnackBar(
-                                        content: new Text("Coming Soon")));
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                  content: Text("Coming Soon"),
+                                  duration: Duration(milliseconds: 800),
+                                ));
                               },
                               child: Image.asset(
                                 "appstore.png",
@@ -166,20 +164,24 @@ class _HomeViewState extends State<HomeView> {
                       children: <Widget>[
                         TextButton(
                           onPressed: () {
-                            // js.context.callMethod("open", [
-                            //   "https://play.google.com/store/apps/details?id=com.stevapps.venda"
-                            // ]);
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                              content: Text("Coming Soon"),
+                              duration: Duration(milliseconds: 800),
+                            ));
                           },
                           child: Image.asset(
-                            "playstore.png",
-                            height: 100.0,
-                            width: 170.0,
+                            "google-play-soon.png",
+                            height: 80.0,
+                            width: 150.0,
                           ),
                         ),
+                        SizedBox(width: 10),
                         TextButton(
                           onPressed: () {
-                            _scaffoldKey.currentState!.showSnackBar(
-                                new SnackBar(content: new Text("Coming Soon")));
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                              content: Text("Coming Soon"),
+                              duration: Duration(milliseconds: 800),
+                            ));
                           },
                           child: Image.asset(
                             "appstore.png",
@@ -222,15 +224,15 @@ class _HomeViewState extends State<HomeView> {
                         children: [
                           TextButton(
                             onPressed: () {},
-                            child: Text(
-                              "Terms",
+                            child: Text("Terms",
+                                style: TextStyle(color: Colors.black)
 //                              style: Theme.of(context).textTheme.headline6,
-                            ),
+                                ),
                           ),
                           TextButton(
                             onPressed: () {},
                             child: Text(
-                              "Privacy",
+                              "Privacy", style: TextStyle(color: Colors.black),
 //                              style: Theme.of(context).textTheme.headline6,
                             ),
                           ),
