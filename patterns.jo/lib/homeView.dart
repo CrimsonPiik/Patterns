@@ -1,5 +1,3 @@
-import 'dart:js' as js;
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -61,6 +59,7 @@ class _HomeViewState extends State<HomeView> {
                             style: Theme.of(context).textTheme.headline6,
                           ),
                         ),
+                        Container(child: Row(children: <Widget>[])),
                         Padding(
                           padding: const EdgeInsets.only(
                             top: 10.0,
@@ -83,8 +82,11 @@ class _HomeViewState extends State<HomeView> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            FlatButton(
+                            TextButton(
                               onPressed: () {
+                                //getMap();
+                                // addFieldsToDb();
+                                // getKeysValuesFromMap(themap);
                                 // js.context.callMethod("open", [
                                 //   "https://play.google.com/store/apps/details?id=com.stevapps.venda"
                                 // ]);
@@ -95,8 +97,12 @@ class _HomeViewState extends State<HomeView> {
                                 width: 170.0,
                               ),
                             ),
-                            FlatButton(
+                            TextButton(
                               onPressed: () {
+                                //  getMap();
+                                // getKeysValuesFromMap(themap);
+                                // addFieldsToDb();
+
                                 _scaffoldKey.currentState!.showSnackBar(
                                     new SnackBar(
                                         content: new Text("Coming Soon")));
@@ -158,7 +164,7 @@ class _HomeViewState extends State<HomeView> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        FlatButton(
+                        TextButton(
                           onPressed: () {
                             // js.context.callMethod("open", [
                             //   "https://play.google.com/store/apps/details?id=com.stevapps.venda"
@@ -170,7 +176,7 @@ class _HomeViewState extends State<HomeView> {
                             width: 170.0,
                           ),
                         ),
-                        FlatButton(
+                        TextButton(
                           onPressed: () {
                             _scaffoldKey.currentState!.showSnackBar(
                                 new SnackBar(content: new Text("Coming Soon")));
@@ -214,14 +220,14 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       Row(
                         children: [
-                          FlatButton(
+                          TextButton(
                             onPressed: () {},
                             child: Text(
                               "Terms",
 //                              style: Theme.of(context).textTheme.headline6,
                             ),
                           ),
-                          FlatButton(
+                          TextButton(
                             onPressed: () {},
                             child: Text(
                               "Privacy",
