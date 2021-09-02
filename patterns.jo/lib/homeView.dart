@@ -32,9 +32,9 @@ class _HomeViewState extends State<HomeView> {
                           height: MediaQuery.of(context).size.height * 0.2,
                         ),
                         Image.asset(
-                          "aa.png",
-                          height: 100.0,
-                          width: 150.0,
+                          "patterns1.png",
+                          height: 140.0,
+                          width: 190.0,
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -130,9 +130,9 @@ class _HomeViewState extends State<HomeView> {
                       height: MediaQuery.of(context).size.height * 0.2,
                     ),
                     Image.asset(
-                      "aa.png",
-                      height: 100.0,
-                      width: 150.0,
+                      "patterns1.png",
+                      height: 140.0,
+                      width: 190.0,
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -269,18 +269,18 @@ class _HomeViewState extends State<HomeView> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "ENABLE LOCATION",
+                      "SHOPPING EXPERIENCE",
                       textAlign: TextAlign.center,
                       style: Theme.of(context)
                           .textTheme
                           .bodyText1!
-                          .copyWith(fontSize: 15.0, color: Colors.black),
+                          .copyWith(fontSize: 15.0, color: Colors.grey),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Discover businesses nearby",
+                      "Shop your favorite brand and pattern",
                       style: Theme.of(context).textTheme.headline3!.copyWith(
                           fontWeight: FontWeight.bold, color: Colors.black),
                     ),
@@ -288,7 +288,7 @@ class _HomeViewState extends State<HomeView> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Find it from the nearest shop around you and get the products and services you need in a snapshot. Venda always shows you the way",
+                      "Patterns team will always focus on finding new ways for you to enjoy shopping your way!",
                       style: Theme.of(context).textTheme.bodyText1!.copyWith(
                             fontSize: 18.0,
                             height: 1.8,
@@ -333,7 +333,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "BUY OR SELL",
+                          "What's new",
                           textAlign: TextAlign.center,
                           style: Theme.of(context)
                               .textTheme
@@ -344,7 +344,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "Get more customers",
+                          "Stay updated with patterns",
                           style: Theme.of(context)
                               .textTheme
                               .headline3!
@@ -372,7 +372,7 @@ class _HomeViewState extends State<HomeView> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Image.asset(
-                  'profilescreenshot.png',
+                  'first.png',
                   fit: BoxFit.cover,
                   height: MediaQuery.of(context).size.height * 0.6,
                   width: MediaQuery.of(context).size.height * 0.4,
@@ -390,7 +390,7 @@ class _HomeViewState extends State<HomeView> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Image.asset(
-                  'profilescreenshot.png',
+                  'first.png',
                   fit: BoxFit.cover,
                   height: MediaQuery.of(context).size.height * 0.6,
                   width: MediaQuery.of(context).size.height * 0.4,
@@ -406,7 +406,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "BUY OR SELL",
+                          "STAY UPDATED",
                           textAlign: TextAlign.center,
                           style: Theme.of(context)
                               .textTheme
@@ -417,7 +417,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "Get more customers",
+                          "More textrue and patterns",
                           style: Theme.of(context)
                               .textTheme
                               .headline3!
@@ -429,7 +429,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "Become a vendor and boost your business. Earn from selling products and services. From services to listings and offers, give customers reasons to always choose you",
+                          "Stay updated to offers and items every season with unique collections",
                           style:
                               Theme.of(context).textTheme.bodyText1!.copyWith(
                                     fontSize: 18.0,
@@ -485,7 +485,7 @@ class _HomeViewState extends State<HomeView> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Review or rate our products and let others know our reputation. It always builds trust and honesty",
+                      "Feedback always builds trust and honesty. Review or rate our products and let others know our reputation.",
                       style: Theme.of(context).textTheme.bodyText1!.copyWith(
                             fontSize: 18.0,
                             height: 1.8,
@@ -541,7 +541,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "More ways to reach Patterns team",
+                          "More ways to reach patterns team",
                           style: Theme.of(context)
                               .textTheme
                               .headline3!
@@ -553,7 +553,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "With the platforms, you love through WhatsApp and Calls. Patterns lets you contact our delivery team easily and quickly",
+                          "With the platforms you love through whatsapp or calls. Patterns lets you contact our delivery team easily and quickly",
                           style:
                               Theme.of(context).textTheme.bodyText1!.copyWith(
                                     fontSize: 18.0,
@@ -614,7 +614,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "More ways to reach Patterns team",
+                          "More ways to reach patterns team",
                           style: Theme.of(context)
                               .textTheme
                               .headline3!
