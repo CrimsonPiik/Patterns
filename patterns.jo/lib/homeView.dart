@@ -333,7 +333,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "What's new",
+                          "STAY UPDATED",
                           textAlign: TextAlign.center,
                           style: Theme.of(context)
                               .textTheme
@@ -344,7 +344,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "Stay updated with patterns",
+                          "More textrue and patterns",
                           style: Theme.of(context)
                               .textTheme
                               .headline3!
@@ -356,7 +356,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "Become a vendor and boost your business. Earn from selling products and services. From services to listings and offers, give customers reasons to always choose you",
+                          "Stay updated to offers and items every season with unique collections",
                           style:
                               Theme.of(context).textTheme.bodyText1!.copyWith(
                                     fontSize: 18.0,
