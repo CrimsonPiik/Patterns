@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeView extends StatefulWidget {
   @override
   _HomeViewState createState() => _HomeViewState();
+}
+
+_launchURL() async {
+  const url = 'https://www.instagram.com/patterns.jo/';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
 }
 
 class _HomeViewState extends State<HomeView> {
@@ -31,10 +41,15 @@ class _HomeViewState extends State<HomeView> {
                         SizedBox(
                           height: MediaQuery.of(context).size.height * 0.2,
                         ),
-                        Image.asset(
-                          "patterns1.png",
-                          height: 140.0,
-                          width: 190.0,
+                        GestureDetector(
+                          onTap: () async {
+                            _launchURL();
+                          },
+                          child: Image.asset(
+                            "patterns1.png",
+                            height: 140.0,
+                            width: 190.0,
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -129,10 +144,15 @@ class _HomeViewState extends State<HomeView> {
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.2,
                     ),
-                    Image.asset(
-                      "patterns1.png",
-                      height: 140.0,
-                      width: 190.0,
+                    GestureDetector(
+                      onTap: () async {
+                        _launchURL();
+                      },
+                      child: Image.asset(
+                        "patterns1.png",
+                        height: 140.0,
+                        width: 190.0,
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -344,7 +364,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "More textrue and patterns",
+                          "More textrues and patterns",
                           style: Theme.of(context)
                               .textTheme
                               .headline3!
@@ -417,7 +437,7 @@ class _HomeViewState extends State<HomeView> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "More textrue and patterns",
+                          "More textrues and patterns",
                           style: Theme.of(context)
                               .textTheme
                               .headline3!
