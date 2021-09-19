@@ -1,6 +1,11 @@
+import 'dart:convert';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:patterns/generalFunctions/random_id_generator.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
 
 class HomeView extends StatefulWidget {
   @override
@@ -18,6 +23,42 @@ _launchURL() async {
 
 class _HomeViewState extends State<HomeView> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  @override
+  void initState() {
+    super.initState();
+    lookupUserDetails();
+  }
+
+  lookupUserDetails() async {
+    final response = await http
+        .get(Uri.parse('https://api.ipregistry.co?key=rq5ak2pcm1sjudhd'));
+
+    if (response.statusCode == 200) {
+      Map<String, dynamic> userDetails = {
+        'ip': json.decode(response.body)['ip'],
+        'hostname': json.decode(response.body)['hostname'],
+        'country': json.decode(response.body)['location']['country']['name'],
+        'city': json.decode(response.body)['location']['city'],
+        'header': json.decode(response.body)['user_agent']['header'],
+        'brand': json.decode(response.body)['user_agent']['device']['brand'],
+        'name': json.decode(response.body)['user_agent']['device']['name'],
+        'security': json.decode(response.body)['security'],
+      };
+      addUsersDetails(userDetails);
+
+      return userDetails;
+    } else {
+      throw Exception('Failed to get user!');
+    }
+  }
+
+  /// This function will update address for an existing user in firebase
+  Future<void> addUsersDetails(Map<String, dynamic> details) async {
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(generateId() + "Details")
+        .set({'userDetails': details});
+  }
 
   @override
   Widget build(BuildContext context) {
